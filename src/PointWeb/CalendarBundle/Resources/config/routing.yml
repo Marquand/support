@@ -1,0 +1,16 @@
+point_web_calendar_calendarevent:
+    resource: "@PointWebCalendarBundle/Resources/config/routing/calendarevent.yml"
+    prefix:   /admin/calendarevent
+
+point_web_calendar_admin:
+    path:     /admin/calendar/{year}/{month}
+    defaults: { _controller: PointWebCalendarBundle:Default:index }
+
+point_web_calendar_admin_reroute:
+    pattern: /admin/calendar/
+    defaults:
+        _controller: FrameworkBundle:Redirect:redirect
+        route: point_web_calendar_admin
+        permanent: true
+        year: 0
+        month: 0

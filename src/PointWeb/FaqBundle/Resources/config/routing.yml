@@ -1,0 +1,8 @@
+point_web_faq_admin:
+    resource: "@PointWebFaqBundle/Resources/config/routing/admin_faq.yml"
+    prefix:   /admin/faq
+
+point_web_faq:
+    resource: "@PointWebFaqBundle/Resources/config/routing/faq.yml"
+    prefix:   /faq
+

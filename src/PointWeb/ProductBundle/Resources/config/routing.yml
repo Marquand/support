@@ -1,0 +1,11 @@
+point_web_product_category_admin:
+    resource: "@PointWebProductBundle/Resources/config/routing/admin_category.yml"
+    prefix:   /admin/category
+
+point_web_product_product_admin:
+    resource: "@PointWebProductBundle/Resources/config/routing/admin_product.yml"
+    prefix:   /admin/product
+
+point_web_product_product:
+    resource: "@PointWebProductBundle/Resources/config/routing/product.yml"
+    prefix:   /product

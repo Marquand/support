@@ -1,0 +1,30 @@
+admin_calendarevent:
+    path:     /
+    defaults: { _controller: "PointWebCalendarBundle:CalendarEvent:index" }
+
+admin_calendarevent_show:
+    path:     /{id}/show
+    defaults: { _controller: "PointWebCalendarBundle:CalendarEvent:show" }
+
+admin_calendarevent_new:
+    path:     /new
+    defaults: { _controller: "PointWebCalendarBundle:CalendarEvent:new" }
+
+admin_calendarevent_create:
+    path:     /create
+    defaults: { _controller: "PointWebCalendarBundle:CalendarEvent:create" }
+    methods:  POST
+
+admin_calendarevent_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "PointWebCalendarBundle:CalendarEvent:edit" }
+
+admin_calendarevent_update:
+    path:     /{id}/update
+    defaults: { _controller: "PointWebCalendarBundle:CalendarEvent:update" }
+    methods:  [POST, PUT]
+
+admin_calendarevent_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "PointWebCalendarBundle:CalendarEvent:delete" }
+    methods:  [POST, DELETE]

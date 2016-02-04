@@ -1,0 +1,17 @@
+{% extends 'PointWebAdminBundle::base.html.twig' %}
+
+{% block content_right %}
+    <h1>Mots-cl&eacute;s</h1>
+    {% if key|length > 0 %}
+        <div>
+            {{ key.0.keywords|raw }}
+        </div>
+        <div class="btn-group-vertical">
+            <a href="{{ path('admin_keywords_edit', {'id':key.0.id}) }}" class="btn btn-primary"><i
+                        class="fa fa-pencil"></i> Modifier</a>
+        </div>
+    {% else %}
+        <a href="{{ path('admin_keywords_new') }}" class="btn btn-primary"><i class="fa fa-plus-circle"></i> Ajouter</a>
+    {% endif %}
+
+{% endblock %}

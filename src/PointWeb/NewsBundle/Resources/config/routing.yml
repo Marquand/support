@@ -1,0 +1,7 @@
+point_web_news_admin:
+    resource: "@PointWebNewsBundle/Resources/config/routing/admin_news.yml"
+    prefix:   /admin/news
+
+point_web_news:
+    resource: "@PointWebNewsBundle/Resources/config/routing/news.yml"
+    prefix:   /news

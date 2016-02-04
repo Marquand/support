@@ -1,0 +1,34 @@
+admin_gallery:
+    path:     /
+    defaults: { _controller: "PointWebGalleryBundle:Gallery:index" }
+
+admin_gallery_show:
+    path:     /{id}/show
+    defaults: { _controller: "PointWebGalleryBundle:Gallery:show" }
+
+admin_gallery_new:
+    path:     /new
+    defaults: { _controller: "PointWebGalleryBundle:Gallery:new" }
+
+admin_gallery_create:
+    path:     /create
+    defaults: { _controller: "PointWebGalleryBundle:Gallery:create" }
+    methods:  POST
+
+admin_gallery_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "PointWebGalleryBundle:Gallery:edit" }
+
+admin_gallery_update:
+    path:     /{id}/update
+    defaults: { _controller: "PointWebGalleryBundle:Gallery:update" }
+    methods:  [POST, PUT]
+
+admin_gallery_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "PointWebGalleryBundle:Gallery:delete" }
+    methods:  [POST, DELETE]
+
+admin_gallery_sort:
+    path:     /{id}/sort
+    defaults: { _controller: "PointWebGalleryBundle:Gallery:sort" }

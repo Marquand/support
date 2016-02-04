@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8"/>
+    <title>{% block title %}ESPACE D'ADMINISTRATION{% endblock %}</title>
+    <script type="text/javascript" src="{{ asset('jquery-ui-1.11.4.custom/external/jquery/jquery.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('jquery-ui-1.11.4.custom/jquery-ui.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('tinymce/js/tinymce/tinymce.min.js') }}"></script>
+    <script type='text/javascript'
+            src="{{ asset('unitegallery-master/source/unitegallery/js/ug-common-libraries.js') }}"></script>
+    <script type='text/javascript'
+            src="{{ asset('unitegallery-master/source/unitegallery/js/ug-functions.js') }}"></script>
+    <script type='text/javascript'
+            src="{{ asset('unitegallery-master/source/unitegallery/js/ug-thumbsgeneral.js') }}"></script>
+    <script type='text/javascript'
+            src="{{ asset('unitegallery-master/source/unitegallery/js/ug-thumbsstrip.js') }}"></script>
+    <script type='text/javascript'
+            src="{{ asset('unitegallery-master/source/unitegallery/js/ug-touchthumbs.js') }}"></script>
+    <script type='text/javascript'
+            src="{{ asset('unitegallery-master/source/unitegallery/js/ug-panelsbase.js') }}"></script>
+    <script type='text/javascript'
+            src="{{ asset('unitegallery-master/source/unitegallery/js/ug-strippanel.js') }}"></script>
+    <script type='text/javascript'
+            src="{{ asset('unitegallery-master/source/unitegallery/js/ug-gridpanel.js') }}"></script>
+    <script type='text/javascript'
+            src="{{ asset('unitegallery-master/source/unitegallery/js/ug-thumbsgrid.js') }}"></script>
+    <script type='text/javascript' src="{{ asset('unitegallery-master/source/unitegallery/js/ug-tiles.js') }}"></script>
+    <script type='text/javascript'
+            src="{{ asset('unitegallery-master/source/unitegallery/js/ug-tiledesign.js') }}"></script>
+    <script type='text/javascript' src="{{ asset('unitegallery-master/source/unitegallery/js/ug-avia.js') }}"></script>
+    <script type='text/javascript'
+            src="{{ asset('unitegallery-master/source/unitegallery/js/ug-slider.js') }}"></script>
+    <script type='text/javascript'
+            src="{{ asset('unitegallery-master/source/unitegallery/js/ug-sliderassets.js') }}"></script>
+    <script type='text/javascript'
+            src="{{ asset('unitegallery-master/source/unitegallery/js/ug-touchslider.js') }}"></script>
+    <script type='text/javascript'
+            src="{{ asset('unitegallery-master/source/unitegallery/js/ug-zoomslider.js') }}"></script>
+    <script type='text/javascript' src="{{ asset('unitegallery-master/source/unitegallery/js/ug-video.js') }}"></script>
+    <script type='text/javascript'
+            src="{{ asset('unitegallery-master/source/unitegallery/js/ug-gallery.js') }}"></script>
+    <script type='text/javascript'
+            src="{{ asset('unitegallery-master/source/unitegallery/js/ug-lightbox.js') }}"></script>
+    <script type='text/javascript'
+            src="{{ asset('unitegallery-master/source/unitegallery/js/ug-carousel.js') }}"></script>
+    <script type='text/javascript' src="{{ asset('unitegallery-master/source/unitegallery/js/ug-api.js') }}"></script>
+    <script type='text/javascript'
+            src="{{ asset('unitegallery-master/source/unitegallery/themes/grid/ug-theme-grid.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/bootstrap.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/moment.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/bootstrap-material-datetimepicker.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/material.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/ripples.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/jquery.rowsorter.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('okfocus-okzoom/src/okzoom.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/admin.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('font-awesome-4.3.0/css/font-awesome.min.css') }}" type="text/css"
+          media="all"/>
+    <link rel="stylesheet" href="{{ asset('jquery-ui-1.11.4.custom/jquery-ui.min.css') }}" type="text/css" media="all"/>
+    <link rel='stylesheet' href="{{ asset('unitegallery-master/source/unitegallery/css/unite-gallery.css') }}"
+          type='text/css' media="all"/>
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" type="text/css" media="all"/>
+    <link rel="stylesheet" href="{{ asset('css/bootstrap-material-datetimepicker.css') }}" type="text/css" media="all"/>
+    <link rel="stylesheet" href="{{ asset('css/material.min.css') }}" type="text/css" media="all"/>
+    <link rel="stylesheet" href="{{ asset('css/material-fullpalette.min.css') }}" type="text/css" media="all"/>
+    <link rel="stylesheet" href="{{ asset('css/ripples.min.css') }}" type="text/css" media="all"/>
+    <link rel="stylesheet" href="{{ asset('css/roboto.min.css') }}" type="text/css" media="all"/>
+    <link rel="stylesheet" href="{{ asset('css/admin.css') }}" type="text/css" media="all"/>
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
+</head>
+<body>
+{% block body %}
+    <div class="navbar navbar-default">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{{ path("point_web_admin_homepage") }}">
+                <img class="logo" src="" alt="logo"/>
+            </a>
+        </div>
+        <div class="navbar-collapse collapse navbar-responsive-collapse">
+            <ul class="nav navbar-nav">
+                {% include 'PointWebAdminBundle::_menu_admin.html.twig' %}
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    {% block body_head_login %}
+                        <a href="{{ path("fos_user_security_logout") }}"
+                           class="mdi-action-exit-to-app"
+                           data-toggle="tooltip"
+                           data-placement="bottom" title="Se déconnecter"></a>
+                    {% endblock %}
+                </li>
+            </ul>
+        </div>
+    </div>
+    {% block content_full %}
+        <div class="row">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-10 well page active">
+                {% block body_content %}
+                    {% block content_left %}
+                    {% endblock %}
+                    {% block content_right %}{% endblock %}
+                {% endblock %}</div>
+
+            <div class="col-lg-1"></div>
+        </div>
+    {% endblock %}
+{% endblock %}
+{% block javascripts %}{% endblock %}
+</body>
+<footer>
+    {% block footer %}{% endblock %}
+</footer>
+</html>

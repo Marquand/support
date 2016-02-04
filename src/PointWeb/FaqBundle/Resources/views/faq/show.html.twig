@@ -1,0 +1,39 @@
+{% extends 'PointWebAdminBundle::base.html.twig' %}
+
+{% block content_right %}
+    <h1>FAQ</h1>
+
+
+    <div class="panel panel-info">
+        <div class="panel-heading">Question</div>
+        <div class="panel-body">
+            {{ entity.question }}
+        </div>
+    </div>
+    <div class="panel panel-info">
+        <div class="panel-heading">Réponse</div>
+        <div class="panel-body">
+            {{ entity.answer|raw }}
+        </div>
+    </div>
+    <div class="panel panel-info">
+        <div class="panel-heading">Position</div>
+        <div class="panel-body">
+            {{ entity.position }}
+        </div>
+    </div>
+    <div class="panel panel-info">
+        <div class="panel-heading">En ligne</div>
+        <div class="panel-body">
+            {% if entity.online %}Oui{% else %}Non{% endif %}
+        </div>
+    </div>
+
+
+    <a href="{{ path('admin_faq') }}" class="btn btn-primary"><i class="fa fa-arrow-circle-left"></i> Retour à la
+        liste</a>
+    <a href="{{ path('admin_faq_edit', { 'id': entity.id }) }}" class="btn btn-primary"><i class="fa fa-pencil"></i>
+        Modifier</a>
+    {{ form(delete_form) }}
+{% endblock %}
+

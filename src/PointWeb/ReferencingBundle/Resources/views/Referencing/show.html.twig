@@ -1,0 +1,43 @@
+{% extends 'PointWebAdminBundle::base.html.twig' %}
+
+{% block  content_right %}
+    <h1>Page</h1>
+
+    <div class="panel panel-info">
+        <div class="panel-heading">Titre</div>
+        <div class="panel-body">
+            {{ entity.title }}
+        </div>
+    </div>
+    <div class="panel panel-info">
+        <div class="panel-heading">H1</div>
+        <div class="panel-body">
+            {{ entity.h1 }}
+        </div>
+    </div>
+    <div class="panel panel-info">
+        <div class="panel-heading">Title du h1</div>
+        <div class="panel-body">
+            {{ entity.h1Title }}
+        </div>
+    </div>
+    <div class="panel panel-info">
+        <div class="panel-heading">Description</div>
+        <div class="panel-body">
+            {{  entity.description|raw }}
+        </div>
+    </div>
+    <div class="panel panel-info">
+        <div class="panel-heading">Path </div>
+        <div class="panel-body">
+            {{  entity.path }}
+        </div>
+    </div>
+
+
+    <div>
+        <a href="{{ path('admin_referencing_edit', {'id':entity.id}) }}" class="btn btn-primary" title="modifier"><i
+                    class="fa fa-pencil"></i> Modifier</a>
+        <a href="{{ path('admin_referencing_delete', {'id':entity.id}) }}" class="btn btn-danger" title="supprimer"><i class="fa fa-plus-circle"></i> Supprimer</a>
+    </div>
+{% endblock %}

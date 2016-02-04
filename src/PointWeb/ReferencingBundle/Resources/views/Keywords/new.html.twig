@@ -1,0 +1,21 @@
+{% extends 'PointWebAdminBundle::base.html.twig' %}
+
+{% block content_right %}
+    <h1>Ajouter des mots-cl&eacute;s</h1>
+
+    {{ form_start(form, {'attr': {'class':'form-horizontal' }}) }}
+    <fieldset>
+        <div class="form-group">
+            {{ form_label(form.keywords) }}
+            <div class="col-lg-10">
+                {{ form_errors(form.keywords) }}
+                {{ form_widget(form.keywords) }}
+            </div>
+        </div>
+
+    </fieldset>
+    {{ form_end(form) }}
+
+    <a href="{{ path('admin_keywords') }}" class="btn btn-primary"><i class="fa fa-arrow-circle-left"></i> Retour &agrave; la
+        liste</a>
+{% endblock %}

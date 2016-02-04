@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params'))|getRef('title') }}</title>
+        <meta name="description" content="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params'))|getRef('description') }}"/>
+        <meta name="keywords" content="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params'))|getRef('keywords') }}"/>
+    <!--<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;"/>-->
+
+
+
+        <script src="{{ asset('js/jserror.js') }}"></script>
+        <script src="{{ asset('js/antispam.js') }}"></script>
+
+    <script src="{{ asset('js/jquery.min.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('js/mdb.js') }}"></script>
+
+
+    <!--<script src="{{ asset('js/jquery.cookiesdirective.js') }}"></script>-->
+    <!--<script src="{{ asset('js/cookies.js') }}"></script>-->
+        <script src="{{ asset('js/app.js') }}"></script>
+
+
+<link rel="stylesheet" href="{{ asset('css/style.css') }}" media="all"/>
+<link rel="stylesheet" href="{{ asset('css/mdb.css') }}" media="all"/>
+<link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" media="all"/>
+ <!-- Material Design Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!--<link rel="stylesheet" href="{{ asset('css/owl.carousel.css') }}" media="all"/>-->
+    <!--<link rel="stylesheet" href="{{ asset('css/owl.theme.css') }}" media="all"/>-->
+    <!--<link rel="stylesheet" href="{{ asset('css/owl.transitions.css') }}" media="all"/>-->
+    <!--<link rel="stylesheet" href="{{ asset('font-awesome-4.3.0/css/font-awesome.min.css') }}" media="all"/>-->
+    <!--<link rel="stylesheet" href="{{ asset('css/imagelightbox.css') }}" media="all"/>-->
+    <!--<link rel="stylesheet" href="{{ asset('css/foundation.css') }}" media="all"/>-->
+        <link rel="stylesheet" href="{{ asset('css/app.css') }}" media="all"/>
+
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
+        <!--[if IE]>
+            <style media="screen">
+               .myhr{margin:-0.45em 0}
+            </style>
+            <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+            <meta http-equiv="imagetoolbar" content="no" />
+        <![endif]-->
+    </head>
+    <body>
+    {% block body %}
+            {% block header %}
+                {% include 'PointWebAppBundle::_header.html.twig' %}
+            {% endblock %}
+            <h1 title="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params'))|getRef('h1Title') }}">{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params'))|getRef('h1') }}</h1>
+
+            <noscript>
+                <dl id="jserror">
+                    <dt>Attention</dt>
+                    <dd>Si vous souhaitez utiliser pleinement toutes les capacités de ce site Internet vous devez activer javascript dans votre 		
+                    navigateur</dd>
+                </dl>
+            </noscript>
+            {% block content %}
+
+            {% endblock %}
+
+        {% endblock %}
+
+            {% block footer %}
+               {{ render(controller('PointWebAppBundle:Default:footer')) }}
+            {% endblock %}
+
+        <div id="scrollToTop"><a href="#">&#9650;</a></div>
+        {% block javascripts %}
+        {% endblock %}
+    </body>
+</html>

@@ -1,0 +1,8 @@
+news:
+    path:     /
+    defaults: { _controller: PointWebNewsBundle:Default:index }
+
+news_show:
+    path:     /{id}/show
+    defaults: { _controller: PointWebNewsBundle:Default:show }
+

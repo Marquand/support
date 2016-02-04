@@ -1,0 +1,34 @@
+admin_guestbook:
+    path:     /
+    defaults: { _controller: "PointWebGuestBookBundle:GuestBook:index" }
+
+admin_guestbook_show:
+    path:     /{id}/show
+    defaults: { _controller: "PointWebGuestBookBundle:GuestBook:show" }
+
+admin_guestbook_new:
+    path:     /new
+    defaults: { _controller: "PointWebGuestBookBundle:GuestBook:new" }
+
+admin_guestbook_create:
+    path:     /create
+    defaults: { _controller: "PointWebGuestBookBundle:GuestBook:create" }
+    methods:  POST
+
+admin_guestbook_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "PointWebGuestBookBundle:GuestBook:edit" }
+
+admin_guestbook_update:
+    path:     /{id}/update
+    defaults: { _controller: "PointWebGuestBookBundle:GuestBook:update" }
+    methods:  [POST, PUT]
+
+admin_guestbook_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "PointWebGuestBookBundle:GuestBook:delete" }
+    methods:  [POST, DELETE]
+
+admin_guestbook_sort:
+    path:     /{id}/sort
+    defaults: { _controller: "PointWebGuestBookBundle:GuestBook:sort" }

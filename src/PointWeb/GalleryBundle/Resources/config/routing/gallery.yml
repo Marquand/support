@@ -1,0 +1,7 @@
+gallery:
+    path:     /
+    defaults: { _controller: "PointWebGalleryBundle:Default:index" }
+
+gallery_show:
+    path:     /{id}/show
+    defaults: { _controller: "PointWebGalleryBundle:Default:show" }

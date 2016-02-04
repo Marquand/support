@@ -1,0 +1,57 @@
+{% extends 'PointWebAdminBundle::base.html.twig' %}
+
+{% block content_right %}
+    <h1>Modifier le commentaire</h1>
+
+    <div class="panel panel-info">
+        <div class="panel-heading">Nom</div>
+        <div class="panel-body">
+            {{ entity.lastname }}
+        </div>
+    </div>
+    <div class="panel panel-info">
+        <div class="panel-heading">Prénom</div>
+        <div class="panel-body">
+            {{ entity.firstname }}
+        </div>
+    </div>
+    <div class="panel panel-info">
+        <div class="panel-heading">Email</div>
+        <div class="panel-body">
+            {{ entity.email }}
+        </div>
+    </div>
+    <div class="panel panel-info">
+        <div class="panel-heading">Commentaire</div>
+        <div class="panel-body">
+            {{ entity.comment|raw }}
+        </div>
+    </div>
+    <div class="panel panel-info">
+        <div class="panel-heading">Notation</div>
+        <div class="panel-body">
+            {{ entity.notation }}
+        </div>
+    </div>
+    <div class="panel panel-info">
+        <div class="panel-heading">Position</div>
+        <div class="panel-body">
+            {{ entity.position }}
+        </div>
+    </div>
+    <div class="panel panel-info">
+        <div class="panel-heading">En ligne</div>
+        <div class="panel-body">
+            {% if entity.online %}Oui{% else %}Non{% endif %}
+        </div>
+    </div>
+
+
+
+    <a href="{{ path('admin_guestbook') }}" class="btn btn-primary"><i class="fa fa-arrow-circle-left"></i> Retour à la
+        liste</a>
+    <a href="{{ path('admin_guestbook_edit', { 'id': entity.id }) }}" class="btn btn-primary"><i class="fa fa-pencil"></i>
+        Modifier</a>
+    {{ form(delete_form) }}
+{% endblock %}
+

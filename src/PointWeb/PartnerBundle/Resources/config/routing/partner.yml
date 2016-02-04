@@ -1,0 +1,7 @@
+partner:
+    path:     /
+    defaults: { _controller: PointWebPartnerBundle:Default:index }
+
+partner_show:
+    path:     /{id}/show
+    defaults: { _controller: PointWebPartnerBundle:Default:show }

@@ -1,0 +1,7 @@
+point_web_gallery_admin:
+    resource: "@PointWebGalleryBundle/Resources/config/routing/admin_gallery.yml"
+    prefix:   /admin/gallery
+
+point_web_gallery:
+    resource: "@PointWebGalleryBundle/Resources/config/routing/gallery.yml"
+    prefix:   /gallery

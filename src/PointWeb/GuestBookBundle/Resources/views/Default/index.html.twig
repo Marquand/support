@@ -1,0 +1,82 @@
+{% extends 'PointWebAppBundle::base.html.twig' %}
+{% block content %}
+    <h1>Listing des commentaires</h1>
+    {% for flashMessage in app.session.flashbag.get('notice') %}
+        <div class="flash-notice">
+            {{ flashMessage }}
+        </div>
+    {% endfor %}
+    <table class="records_list">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Commentaire</th>
+            <th>Note</th>
+
+            <th>Date de création</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td>{{ entity.id }}</td>
+                <td>{{ entity.lastname }}</td>
+                <td>{{ entity.firstname }}</td>
+                <td>{{ entity.comment|raw }}</td>
+                <td>{{ entity.notation }}</td>
+
+                <td>{% if entity.createDate %}{{ entity.createDate|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <!-- Formulaire d'envoi de commentaires -->
+    <h1>Création d'un commentaire</h1>
+
+    {{ form_start(form) }}
+    <fieldset>
+        <div class="form-group">
+            {{ form_label(form.lastname) }}
+            <div class="col-lg-10">
+                {{ form_errors(form.lastname) }}
+                {{ form_widget(form.lastname) }}
+            </div>
+        </div>
+        <div class="form-group">
+            {{ form_label(form.firstname) }}
+            <div class="col-lg-10">
+                {{ form_errors(form.firstname) }}
+                {{ form_widget(form.firstname) }}
+            </div>
+        </div>
+        <div class="form-group">
+            {{ form_label(form.email) }}
+            <div class="col-lg-10">
+                {{ form_errors(form.email) }}
+                {{ form_widget(form.email) }}
+            </div>
+        </div>
+        <div class="form-group">
+            {{ form_label(form.comment) }}
+            <div class="col-lg-10">
+                {{ form_errors(form.comment) }}
+                {{ form_widget(form.comment) }}
+            </div>
+        </div>
+        <div class="form-group">
+            {{ form_label(form.notation) }}
+            <div class="col-lg-10">
+                {{ form_errors(form.notation) }}
+                {{ form_widget(form.notation) }}
+            </div>
+        </div>
+
+    </fieldset>
+    {{ form_end(form) }}
+
+
+{% endblock %}

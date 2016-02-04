@@ -1,0 +1,34 @@
+admin_faq:
+    path:     /
+    defaults: { _controller: "PointWebFaqBundle:faq:index" }
+
+admin_faq_show:
+    path:     /{id}/show
+    defaults: { _controller: "PointWebFaqBundle:faq:show" }
+
+admin_faq_new:
+    path:     /new
+    defaults: { _controller: "PointWebFaqBundle:faq:new" }
+
+admin_faq_create:
+    path:     /create
+    defaults: { _controller: "PointWebFaqBundle:faq:create" }
+    methods:  POST
+
+admin_faq_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "PointWebFaqBundle:faq:edit" }
+
+admin_faq_update:
+    path:     /{id}/update
+    defaults: { _controller: "PointWebFaqBundle:faq:update" }
+    methods:  [POST, PUT]
+
+admin_faq_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "PointWebFaqBundle:faq:delete" }
+    methods:  [POST, DELETE]
+
+admin_faq_sort:
+    path:     /{id}/sort
+    defaults: { _controller: "PointWebFaqBundle:Faq:sort" }

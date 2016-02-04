@@ -1,0 +1,34 @@
+{% extends 'PointWebAdminBundle::base.html.twig' %}
+
+{% block content_right %}
+    <h1>Création d'une Page</h1>
+    {{ form_start(edit_form, {'attr': {'class':'form-horizontal' }}) }}
+    <fieldset>
+        <div class="form-group">
+            {{ form_label(edit_form.title) }}
+            <div class="col-lg-10">
+                {{ form_errors(edit_form.title) }}
+                {{ form_widget(edit_form.title) }}
+            </div>
+        </div>
+        <div class="form-group">
+            {{ form_label(edit_form.path) }}
+            <div class="col-lg-10">
+                {{ form_errors(edit_form.path) }}
+                {{ form_widget(edit_form.path) }}
+            </div>
+        </div>
+        <div class="form-group">
+            {{ form_label(edit_form.content) }}
+            <div class="col-lg-10">
+                {{ form_errors(edit_form.content) }}
+                {{ form_widget(edit_form.content) }}
+            </div>
+        </div>
+
+        {{ form_end(edit_form) }}
+    </fieldset>
+    <a href="{{ path('admin_page') }}" class="btn btn-primary"><i class="fa fa-arrow-circle-left"></i> Retour à la liste</a>
+
+{% endblock %}
+

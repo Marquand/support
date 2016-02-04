@@ -1,0 +1,36 @@
+admin_partner:
+    path:     /{page}/list
+    defaults:
+        _controller: "PointWebPartnerBundle:Partner:index"
+        page: 1
+
+admin_partner_show:
+    path:     /{id}/show
+    defaults: { _controller: "PointWebPartnerBundle:Partner:show" }
+
+admin_partner_new:
+    path:     /new
+    defaults: { _controller: "PointWebPartnerBundle:Partner:new" }
+
+admin_partner_create:
+    path:     /create
+    defaults: { _controller: "PointWebPartnerBundle:Partner:create" }
+    methods:  POST
+
+admin_partner_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "PointWebPartnerBundle:Partner:edit" }
+
+admin_partner_update:
+    path:     /{id}/update
+    defaults: { _controller: "PointWebPartnerBundle:Partner:update" }
+    methods:  [POST, PUT]
+
+admin_partner_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "PointWebPartnerBundle:Partner:delete" }
+    methods:  [POST, DELETE]
+
+admin_partner_sort:
+    path:     /{id}/sort
+    defaults: { _controller: "PointWebPartnerBundle:Partner:sort" }

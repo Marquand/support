@@ -1,0 +1,37 @@
+{% extends 'PointWebAdminBundle::base.html.twig' %}
+
+{% block content_right %}
+    <h1>Création d'une F.A.Q</h1>
+
+    {{ form_start(form, {'attr': {'class':'form-horizontal' }}) }}
+    <fieldset>
+        <div class="form-group">
+            {{ form_label(form.question) }}
+            <div class="col-lg-10">
+                {{ form_errors(form.question) }}
+                {{ form_widget(form.question) }}
+            </div>
+        </div>
+        <div class="form-group">
+            {{ form_label(form.answer) }}
+            <div class="col-lg-10">
+                {{ form_errors(form.answer) }}
+                {{ form_widget(form.answer) }}
+            </div>
+        </div>
+        <div class="form-group">
+            {{ form_label(form.online) }}
+            <div class="col-lg-10">
+                {{ form_errors(form.online) }}
+                {{ form_widget(form.online) }}
+            </div>
+        </div>
+
+    </fieldset>
+    {{ form_end(form) }}
+
+    <a href="{{ path('admin_faq') }}" class="btn btn-primary"><i class="fa fa-arrow-circle-left"></i> Retour à la
+        liste</a>
+{% endblock %}
+
+

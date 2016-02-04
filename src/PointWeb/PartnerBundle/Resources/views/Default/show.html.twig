@@ -1,0 +1,28 @@
+{% extends 'PointWebAppBundle::base.html.twig' %}
+{% block content %}
+<table>
+    <tbody>
+    <tr>
+        <th>Id</th>
+        <td>{{ detail.id }}</td>
+    </tr>
+    <tr>
+        <th>Title</th>
+        <td>{{ detail.name }}</td>
+    </tr>
+    <tr>
+        <th>Content</th>
+        <td>{{ detail.content }}</td>
+    </tr>
+    <tr>
+        <th>Date</th>
+        <td>{{ detail.createDate|date('Y-m-d H:i:s') }}</td>
+    </tr>
+    <tr>
+        <th></th>
+        <td><a href="{{ path('partner') }}">Retour</a></td>
+    </tr>
+
+    </tbody>
+</table>
+{% endblock %}

@@ -1,0 +1,8 @@
+guestbook:
+    path:     /
+    defaults: { _controller: "PointWebGuestBookBundle:Default:index" }
+
+guestbook_create:
+    path:     /create
+    defaults: { _controller: "PointWebGuestBookBundle:Default:create" }
+    methods:  POST

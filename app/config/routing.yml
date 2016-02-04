@@ -1,0 +1,58 @@
+point_web_newsletter:
+    resource: "@PointWebNewsletterBundle/Resources/config/routing.yml"
+    prefix:   /
+
+point_web_page:
+    resource: "@PointWebPageBundle/Resources/config/routing.yml"
+    prefix:   /
+
+point_web_referencing:
+    resource: "@PointWebReferencingBundle/Resources/config/routing.yml"
+    prefix:   /
+
+point_web_calendar:
+    resource: "@PointWebCalendarBundle/Resources/config/routing.yml"
+    prefix:   /
+
+point_web_product:
+    resource: "@PointWebProductBundle/Resources/config/routing.yml"
+    prefix:   /
+
+point_web_ged:
+    resource: "@PointWebGedBundle/Resources/config/routing.yml"
+    prefix:   /
+
+point_web_faq:
+    resource: "@PointWebFaqBundle/Resources/config/routing.yml"
+    prefix:   /
+
+point_web_gallery:
+    resource: "@PointWebGalleryBundle/Resources/config/routing.yml"
+    prefix:   /
+
+point_web_guest_book:
+    resource: "@PointWebGuestBookBundle/Resources/config/routing.yml"
+    prefix:   /
+
+point_web_partner:
+    resource: "@PointWebPartnerBundle/Resources/config/routing.yml"
+    prefix:   /
+
+point_web_news:
+    resource: "@PointWebNewsBundle/Resources/config/routing.yml"
+    prefix:   /
+
+point_web_user:
+    resource: "@PointWebUserBundle/Resources/config/routing.yml"
+    prefix:   /
+
+point_web_admin:
+    resource: "@PointWebAdminBundle/Resources/config/routing.yml"
+    prefix:   /admin
+
+point_web_app:
+    resource: "@PointWebAppBundle/Resources/config/routing.yml"
+    prefix:   /
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"

@@ -1,0 +1,38 @@
+{% extends 'PointWebAdminBundle::base.html.twig' %}
+
+{% block content_right %}
+    <h1>Catégorie</h1>
+
+
+    <div class="panel panel-info">
+        <div class="panel-heading">Titre</div>
+        <div class="panel-body">
+            {{ entity.title }}
+        </div>
+    </div>
+    <div class="panel panel-info">
+        <div class="panel-heading">Description</div>
+        <div class="panel-body">
+            {{ entity.description|raw }}
+        </div>
+    </div>
+    <div class="panel panel-info">
+        <div class="panel-heading">Position</div>
+        <div class="panel-body">
+            {{ entity.position }}
+        </div>
+    </div>
+    <div class="panel panel-info">
+        <div class="panel-heading">Online</div>
+        <div class="panel-body">
+            {% if entity.online == 0 %}<td> Non </td>{% else %}<td> Oui </td>{% endif %}
+        </div>
+    </div>
+
+            <a href="{{ path('admin_category') }}" class="btn btn-primary"><i class="fa fa-arrow-circle-left"></i> Retour à la
+                liste</a>
+            <a href="{{ path('admin_category_edit', { 'id': entity.id }) }}" class="btn btn-primary"><i class="fa fa-pencil"></i>
+                Modifier</a>
+    {{ form(delete_form) }}
+{% endblock %}
+

@@ -1,0 +1,4 @@
+services:
+#    point_web_calendar.example:
+#        class: PointWeb\CalendarBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

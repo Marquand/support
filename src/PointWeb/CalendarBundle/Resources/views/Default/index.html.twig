@@ -1,0 +1,48 @@
+{% extends 'PointWebAdminBundle::base.html.twig' %}
+
+{% block content_full %}
+    <div class="calendar-head shadow-z-1">
+        <h1>Calendrier {{ month }}/{{ year }}</h1>
+
+        <div class="row">
+            <div class="btn-group-left">
+                <div class="btn-group">
+                    <a href="{{ path('point_web_calendar_admin', {'year':lastYear, 'month':lastMonth}) }}"
+                       class="btn btn-primary"><i
+                                class="fa fa-arrow-left"></i> Mois precedent</a>
+                    <a href="{{ path('point_web_calendar_admin', {'year':nextYear, 'month':nextMonth}) }}"
+                       class="btn btn-primary">Mois
+                        suivant <i class="fa fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="btn-group-center filter-calendar">
+                <form action="{{ path('point_web_calendar_admin', {'year':year, 'month':month}) }}" method="post">
+                    <select id="user_select" name="id_user" class="form-control">
+                        <option value="" {% if selected_user == 0 %}selected="selected"{% endif %}>Sélectionnez un
+                            utilisateur
+                        </option>
+                        {% for user in users %}
+                            <option value="{{ user.id }}"
+                                    {% if selected_user == user.id %}selected="selected"{% endif %}>{{ user.fullname }}</option>
+                        {% endfor %}
+                    </select>
+                    <button type="submit" id="filter_calendar" name="filter" class="btn btn-success">Filtrer
+                        <div class="ripple-wrapper"></div>
+                    </button>
+                </form>
+            </div>
+            <div class="btn-group-right">
+                <a href="{{ path('admin_calendarevent_new') }}" class="btn btn-primary"><i
+                            class="fa fa-plus-circle"></i>
+                    Ajouter</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div style="clear:both;"></div>
+    <div class="calendar-body well">
+    {{ calendar|raw }}
+        <div style="clear:both;"></div>
+    </div>
+{% endblock %}

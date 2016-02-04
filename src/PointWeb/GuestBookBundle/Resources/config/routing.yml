@@ -1,0 +1,8 @@
+point_web_guest_book_admin:
+    resource: "@PointWebGuestBookBundle/Resources/config/routing/admin_guestbook.yml"
+    prefix:   /admin/guestbook
+
+
+point_web_guest_book:
+    resource: "@PointWebGuestBookBundle/Resources/config/routing/guestbook.yml"
+    prefix:   /guestbook

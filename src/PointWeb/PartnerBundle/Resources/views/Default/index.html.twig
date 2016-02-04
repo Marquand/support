@@ -1,0 +1,15 @@
+{% extends 'PointWebAppBundle::base.html.twig' %}
+{% block content %}
+Listing :</br>
+<ul>
+    {% for item in list %}
+        <li>
+            ID : {{ item.id }}</br>
+            Titre : {{ item.name }}</br>
+            Description : {{ item.content }}</br>
+            Date de création : le {{ item.createDate|date('d-m-Y') }}</br>
+            <a href="{{ path('partner_show',  { 'id': item.id }) }}">Voir le détail</a>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}
