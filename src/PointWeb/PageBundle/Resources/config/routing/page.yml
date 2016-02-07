@@ -1,3 +1,0 @@
-page:
-    path:     /{path}
-    defaults: { _controller: "PointWebPageBundle:Default:index" }

@@ -2714,7 +2714,8 @@ input {
  * 2. Remove excess padding in IE 8/9/10.
  */
 input[type="checkbox"],
-input[type="radio"] {
+input[type="radio"],
+.radio {
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -3574,7 +3575,8 @@ a {
 
 html {
   line-height: 1.5;
-  font-family: "Roboto",     sans-serif;
+  font-family: "Roboto",
+     sans-serif;
   font-weight: normal;
   color: rgba(0, 0, 0, 0.87);
 }

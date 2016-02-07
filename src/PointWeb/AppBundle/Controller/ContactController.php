@@ -25,7 +25,7 @@ class ContactController extends Controller
 
         $entities = $em->getRepository('PointWebAppBundle:Contact')->findBy(
             array(),
-            array('createDate' => 'DESC')
+            array('id' => 'DESC')
         );
 
         return $this->render('PointWebAppBundle:Contact:index.html.twig', array(

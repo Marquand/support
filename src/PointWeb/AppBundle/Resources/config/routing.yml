@@ -6,6 +6,18 @@ point_web_app_homepage:
     path:     /
     defaults: { _controller: PointWebAppBundle:Default:index }
 
+point_web_app_realisation:
+    path:     /realisation
+    defaults: { _controller: PointWebAppBundle:Default:realisation }
+
+point_web_app_creation:
+    path:     /creation
+    defaults: { _controller: PointWebAppBundle:Default:creation }
+
+point_web_app_serveur:
+    path:     /serveur
+    defaults: { _controller: PointWebAppBundle:Default:serveur }
+
 point_web_app_legal:
     path:     /legal
     defaults: { _controller: PointWebAppBundle:Default:legal }

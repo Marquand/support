@@ -1,0 +1,38 @@
+{% extends 'PointWebAppBundle::base.html.twig' %}
+{% block content %}
+	{% block aside %}
+		{{ render(controller('PointWebAppBundle:Default:aside')) }}
+	{% endblock %}
+	<div class="col-md-9">
+		<div class="row text-center">
+			<!-- /.col-md-4 -->
+				<div class="card hoverable">
+					<div class="card-image">
+						<img src="{{asset('images/create_web.jpg')}}">
+						<span class="card-title">Service d'hébergement</span>
+					</div>
+					<div class="card-content">
+						-<h3>
+						Programmation à base de Symfony2 un Framework php Français ! 
+						</h3>-
+						<p>
+							
+						</p>
+					</div>
+					<div class="card-action">
+						<button type="button" class="btn btn-default waves-effect waves-light">Plus d'information</button>
+						<a type="button"   href="{{path('point_web_app_contact')}}" class="btn btn-info waves-effect waves-light">Remplir un devis</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- /.carousel -->
+	
+	<!-- /.container -->
+	<div class="container">
+		<hr>
+	</div>
+	<!-- /.container -->
+{% endblock %}

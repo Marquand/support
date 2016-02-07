@@ -18,10 +18,22 @@ use Symfony\Component\Serializer\Serializer;
 
 class DefaultController extends Controller
 {
-    public function indexAction(Request $request = null)
+    public function indexAction()
     {
-        
-    
+            return $this->render('PointWebAppBundle:Default:index.html.twig');
+    }
+    public function creationAction()
+    {
+            return $this->render('PointWebAppBundle:Default:creation.html.twig');
+    }
+    public function serveurAction()
+    {
+            return $this->render('PointWebAppBundle:Default:serveur.html.twig');
+    }
+
+
+ public function asideAction(Request $request = null)
+    {
         $status = 0;
 
         $entity = new ContactMail();
@@ -41,7 +53,7 @@ class DefaultController extends Controller
                 $message = \Swift_Message::newInstance()
                     ->setSubject('Contact site')
                     ->setFrom($entity->getEmail())
-                    ->setTo($this->container->getParameter('mail_to'))
+                    ->setTo($this->container->getParameter('marquand.thibault@gmail.com'))
                     ->setBody($this->renderView('PointWebAppBundle:Mail:contactmail.txt.twig', array(
                         'entity' => $entity
                     )));
@@ -51,11 +63,10 @@ class DefaultController extends Controller
             }
        
            if ($status == 0) {
-            return $this->render('PointWebAppBundle:Default:index.html.twig', array(
+            return $this->render('PointWebAppBundle::_aside.html.twig', array(
                 'entity' => $entity,
                 'form' => $form->createView(),
             ));
-
     }
 }
 
@@ -99,7 +110,7 @@ class DefaultController extends Controller
             'method' => 'POST',
         ));
 
-        $form->add('submit', 'submit', array('label' => 'Envoyer'));
+        $form->add('submit', 'submit', array('label' => 'Envoyer','attr' => array('class' => 'btn btn-info waves-effect waves-light')));
         $form->handleRequest($request);
 
         if ($form->isValid()) {
@@ -135,10 +146,13 @@ class DefaultController extends Controller
             ));
         }
     }
-
+    public function realisationAction()
+    {
+        return $this->render('PointWebAppBundle:Default:realisation.html.twig');
+    }
     public function thanksAction()
     {
-        return $this->render('PointWebAppBundle:Default:thanks.html.twig');
+        return $this->render('PointWebAppBundle:Default:index.html.twig');
     }
 
     public function cookiesAction()

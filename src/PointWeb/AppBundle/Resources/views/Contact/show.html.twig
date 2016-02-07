@@ -1,63 +1,107 @@
 {% extends 'PointWebAdminBundle::base.html.twig' %}
-
 {% block  content_right %}
     <h1>Contact</h1>
-
-    <div class="panel panel-info">
-        <div class="panel-heading">Nom</div>
-        <div class="panel-body">
-            {{ entity.lastname }}
+    <div class="col-md-4">
+        <div class="panel panel-info">
+            <div class="panel-heading">Prénom</div>
+            <div class="panel-body">
+                {{ entity.firstname }}
+            </div>
+        </div>
+        <div class="panel panel-info">
+            <div class="panel-heading">Nom</div>
+            <div class="panel-body">
+                {{ entity.lastname }}
+            </div>
+        </div>
+        <div class="panel panel-info">
+            <div class="panel-heading">Email</div>
+            <div class="panel-body">
+                {{ entity.email }}
+            </div>
+        </div>
+        <div class="panel panel-info">
+            <div class="panel-heading">Adresse</div>
+            <div class="panel-body">
+                {{ entity.address }}
+            </div>
         </div>
     </div>
-    <div class="panel panel-info">
-        <div class="panel-heading">Prénom</div>
-        <div class="panel-body">
-            {{ entity.firstname }}
+    <div class="col-md-4">
+        <div class="panel panel-info">
+            <div class="panel-heading">Ville</div>
+            <div class="panel-body">
+                {{ entity.city }}
+            </div>
+        </div>
+        <div class="panel panel-info">
+            <div class="panel-heading">Code Postale</div>
+            <div class="panel-body">
+                {{ entity.zipCode }}
+            </div>
+        </div>
+        <div class="panel panel-info">
+            <div class="panel-heading">Téléphone</div>
+            <div class="panel-body">
+                {{ entity.phone }}
+            </div>
         </div>
     </div>
-    <div class="panel panel-info">
-        <div class="panel-heading">Téléphone</div>
-        <div class="panel-body">
-            {{ entity.phone }}
+    <div class="col-md-4">
+        <div class="panel panel-info">
+            <div class="panel-heading">Module Actualité</div>
+            <div class="panel-body">
+                {{ entity.Mactualite }}
+            </div>
+            <div class="panel-heading">Module Contact</div>
+            <div class="panel-body">
+                {{ entity.Mcontact }}
+            </div>
+            <div class="panel-heading">Module Produit</div>
+            <div class="panel-body">
+                {{ entity.Mproduit }}
+            </div>
+            <div class="panel-heading">Module Livre D'or</div>
+            <div class="panel-body">
+                {{ entity.Mlivre }}
+            </div>
+            <div class="panel-heading">Module Partenaire</div>
+            <div class="panel-body">
+                {{ entity.Mpartenaire }}
+            </div>
+            <div class="panel-heading">Module Catégorie</div>
+            <div class="panel-body">
+                {{ entity.Mcategorie }}
+            </div>
+            <div class="panel-heading">Module Référencement</div>
+            <div class="panel-body">
+                {{ entity.Mreferencement }}
+            </div>
+            <div class="panel-heading">Module Calendrier</div>
+            <div class="panel-body">
+                {{ entity.Mcalendrier }}
+            </div>
+            
+            <div class="panel-heading">Module Newsletter</div>
+            <div class="panel-body">
+                {{ entity.Mnewsletter }}
+            </div>
         </div>
-    </div>
-    <div class="panel panel-info">
-        <div class="panel-heading">Email</div>
-        <div class="panel-body">
-            {{ entity.email }}
         </div>
-    </div>
-    <div class="panel panel-info">
-        <div class="panel-heading">Adresse</div>
-        <div class="panel-body">
-            {{ entity.address }}
+        <div class="col-md-12">
+        <div class="panel panel-info">
+            <div class="panel-heading">Demande de module personnalisé :</div>
+            <div class="panel-body">
+                {{ entity.Mautre }}
+            </div>
         </div>
-    </div>
-    <div class="panel panel-info">
-        <div class="panel-heading">Code postal</div>
-        <div class="panel-body">
-            {{ entity.zipCode }}
+        <div class="panel panel-info">
+            <div class="panel-heading">Message</div>
+            <div class="panel-body">
+                {{ entity.message }}
+            </div>
         </div>
-    </div>
-    <div class="panel panel-info">
-        <div class="panel-heading">Ville</div>
-        <div class="panel-body">
-            {{ entity.city }}
-        </div>
-    </div>
-    <div class="panel panel-info">
-        <div class="panel-heading">Message</div>
-        <div class="panel-body">
-            {{ entity.message }}
-        </div>
-    </div>
-    <div class="panel panel-info">
-        <div class="panel-heading">Date de création</div>
-        <div class="panel-body">
-            {{ entity.createDate|date('d-m-Y') }}
-        </div>
-    </div>
-
-    <a href="{{ path('admin_contact') }}" class="btn btn-primary"><i class="fa fa-arrow-circle-left"></i> Retour à la
+        <a href="{{ path('admin_contact') }}" class="btn btn-primary"><i class="fa fa-arrow-circle-left"></i> Retour à la
         liste</a>
+    </div>
 {% endblock %}
