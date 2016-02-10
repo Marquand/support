@@ -14,12 +14,6 @@ point_web_app_creation:
     path:     /creation
     defaults: { _controller: PointWebAppBundle:Default:creation }
 
-<<<<<<< HEAD
-=======
-point_web_app_serveur:
-    path:     /serveur
-    defaults: { _controller: PointWebAppBundle:Default:serveur }
->>>>>>> 96e09c4e8aa50ba58b809c5bc5ce1b6459ac64ed
 
 point_web_app_legal:
     path:     /legal

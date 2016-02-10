@@ -24,11 +24,13 @@ class AppKernel extends Kernel
             new PointWeb\NewsBundle\PointWebNewsBundle(),
             new PointWeb\PartnerBundle\PointWebPartnerBundle(),
             new PointWeb\GuestBookBundle\PointWebGuestBookBundle(),
+            new PointWeb\GalleryBundle\PointWebGalleryBundle(),
             new PointWeb\GedBundle\PointWebGedBundle(),
             new PointWeb\FaqBundle\PointWebFaqBundle(),
             new PointWeb\ProductBundle\PointWebProductBundle(),
             new PointWeb\CalendarBundle\PointWebCalendarBundle(),
             new PointWeb\ReferencingBundle\PointWebReferencingBundle(),
+            new PointWeb\PageBundle\PointWebPageBundle(),
             new PointWeb\NewsletterBundle\PointWebNewsletterBundle(),
         );
 
