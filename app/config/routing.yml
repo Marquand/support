@@ -2,10 +2,6 @@ point_web_newsletter:
     resource: "@PointWebNewsletterBundle/Resources/config/routing.yml"
     prefix:   /
 
-point_web_page:
-    resource: "@PointWebPageBundle/Resources/config/routing.yml"
-    prefix:   /
-
 point_web_referencing:
     resource: "@PointWebReferencingBundle/Resources/config/routing.yml"
     prefix:   /
@@ -24,10 +20,6 @@ point_web_ged:
 
 point_web_faq:
     resource: "@PointWebFaqBundle/Resources/config/routing.yml"
-    prefix:   /
-
-point_web_gallery:
-    resource: "@PointWebGalleryBundle/Resources/config/routing.yml"
     prefix:   /
 
 point_web_guest_book:

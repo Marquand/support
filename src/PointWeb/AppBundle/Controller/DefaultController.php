@@ -26,6 +26,13 @@ class DefaultController extends Controller
     {
             return $this->render('PointWebAppBundle:Default:creation.html.twig');
     }
+<<<<<<< HEAD
+=======
+    public function serveurAction()
+    {
+            return $this->render('PointWebAppBundle:Default:serveur.html.twig');
+    }
+>>>>>>> 96e09c4e8aa50ba58b809c5bc5ce1b6459ac64ed
 
 
  public function asideAction(Request $request = null)

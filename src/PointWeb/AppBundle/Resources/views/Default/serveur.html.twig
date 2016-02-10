@@ -1,0 +1,97 @@
+{% extends 'PointWebAppBundle::base.html.twig' %}
+{% block content %}
+	{% block aside %}
+		{{ render(controller('PointWebAppBundle:Default:aside')) }}
+	{% endblock %}
+	<div class="col-md-9">
+		<div class="row text-center">
+			<!-- /.col-md-4 -->
+			<div class="card hoverable">
+				<div class="card-image">
+					<img src="{{asset('images/serveur.jpg')}}">
+					<span class="card-title">Service d'hébergement</span>
+				</div>
+				<div class="card-content">
+					-<h1>
+					Hébergement Professionnel
+					</h1>
+					
+					<div class="col-md-4">
+						<!-- /.col-md-4 -->
+						<div class="card hoverable">
+							<div class="card-image">
+								<img src="{{asset('images/serveur.jpg')}}">
+								<span class="card-title"></span>
+							</div>
+							<h2>	
+							Nos Serveurs
+							</h2>-
+							<div class="card-content">
+								<p>
+								Nous vous proposons un hébergement sur nos serveurs.  <br/>
+								
+								Une bande passante de <strong>200Mb/s</strong> pour une <strong>accéssibilité</strong> aux contenues <strong>garantie</strong> pour tout type de traffic. <br/>
+								<br/>
+
+								</p>
+								
+							</div>
+							
+						</div>
+					</div>
+					<div class="col-md-4">
+						<!-- /.col-md-4 -->
+						<div class="card hoverable">
+							<div class="card-image">
+								<img src="{{asset('images/serveur.jpg')}}">
+								<span class="card-title"></span>
+							</div>
+							<h2>
+								La Maintenance
+							</h2>-
+							<div class="card-content">
+								<p>
+								Assurance d'un suivi constantes des mise à jours <strong>sécurité</strong>, pour prévenir de toute attaque de votre site. <br/> 
+								<br/>
+								Nous savons à qu'elle point l'accessibilité de votre site est importante pour vos visiteurs 
+								</p>
+								
+							</div>
+							
+						</div>
+					</div>
+					<div class="col-md-4">
+						<!-- /.col-md-4 -->
+						<div class="card hoverable">
+							<div class="card-image">
+								<img src="{{asset('images/serveur.jpg')}}">
+								<span class="card-title"></span>
+							</div>
+							<h2>
+								Le Support
+							</h2>-
+							<div class="card-content">
+								<p>
+								Un espace support vous sera donnez afin de posé toutes les questions que vous souhaiteriez. <br/>
+								<br/>
+								Un système de ticket pour une intervention rapide sur votre site*/serveur suite à un accident. 
+								</p>
+								
+							</div>
+							
+						</div>
+					</div>
+				</div>
+					<div class="card-action">
+								<a type="button" href="{{path('point_web_app_homepage')}}" class="btn btn-primary waves-effect waves-light">retour accueil</a>
+								<a type="button"   href="{{path('point_web_app_contact')}}" class="btn btn-info waves-effect waves-light">Remplir un devis</a>
+							</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- /.carousel -->
+	
+	<!-- /.container -->
+	<!-- /.container -->
+{% endblock %}
