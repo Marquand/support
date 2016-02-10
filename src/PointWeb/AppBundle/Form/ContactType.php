@@ -16,29 +16,148 @@ class ContactType extends AbstractType
     {
         $builder
             ->add('lastname', 'text', array(
-                "label" => "Nom :"
-            ))
+                "label" => "Nom :",
+                'attr' => array('id' => 'icon_prefix', 'class' => 'validate'
+            )))
             ->add('firstname', 'text', array(
-                "label" => "Prénom :"
-            ))
+                "label" => "Prénom :",
+                'attr' => array('id' => 'icon_prefix', 'class' => 'validate'
+            )))
             ->add('phone', 'text', array(
-                "label" => "Téléphone :"
-            ))
+                "label" => "Téléphone :",
+                'attr' => array('id' => 'icon_prefix', 'class' => 'validate'
+            )))
             ->add('email', 'text', array(
-                "label" => "Email :"
-            ))
+                "label" => "Email :",
+                'attr' => array('id' => 'icon_prefix', 'class' => 'validate'
+            )))
             ->add('address', 'text', array(
-                "label" => "Adresse :"
-            ))
+                "label" => "Adresse :",
+                'attr' => array('id' => 'icon_prefix', 'class' => 'validate'
+            )))
             ->add('zipCode', 'text', array(
-                "label" => "Code postal :"
-            ))
+                "label" => "Code postal :",
+                'attr' => array('id' => 'icon_prefix', 'class' => 'validate'
+            )))
             ->add('city', 'text', array(
-                "label" => "Ville :"
-            ))
+                "label" => "Ville :",
+                'attr' => array('id' => 'icon_prefix', 'class' => 'validate'
+            )))
+
+
+
+            ->add('Mactualite', 'choice', array(
+                'required' => false,
+                'placeholder' => false,
+                'choices' => array(
+                    '1' => 'Oui',
+                    '0' => 'Non'
+                ),
+                'data' => false,
+                "label" => "Module Actualité :",
+                'attr' => array( 'class' => ' '
+            )))
+            ->add('Mcontact', 'choice', array(
+                'required' => false,
+                'placeholder' => false,
+                'choices' => array(
+                    '1' => 'Oui',
+                    '0' => 'Non'
+                ),
+                'data' => false,
+                "label" => "Module Actualité :",
+                'attr' => array( 'class' => ' '
+            )))
+            ->add('Mproduit', 'choice', array(
+                'required' => false,
+                'placeholder' => false,
+                'choices' => array(
+                    '1' => 'Oui',
+                    '0' => 'Non'
+                ),
+                'data' => false,
+                "label" => "Module Actualité :",
+                'attr' => array( 'class' => ' '
+            )))
+            ->add('Mlivre', 'choice', array(
+                'required' => false,
+                'placeholder' => false,
+                'choices' => array(
+                    '1' => 'Oui',
+                    '0' => 'Non'
+                ),
+                'data' => false,
+                "label" => "Module Actualité :",
+                'attr' => array( 'class' => ' '
+            )))
+            ->add('Mpartenaire', 'choice', array(
+                'required' => false,
+                'placeholder' => false,
+                'choices' => array(
+                    '1' => 'Oui',
+                    '0' => 'Non'
+                ),
+                'data' => false,
+                "label" => "Module Actualité :",
+                'attr' => array( 'class' => ' '
+            )))
+            ->add('Mcategorie', 'choice', array(
+                'required' => false,
+                'placeholder' => false,
+                'choices' => array(
+                    '1' => 'Oui',
+                    '0' => 'Non'
+                ),
+                'data' => false,
+                "label" => "Module Actualité :",
+                'attr' => array( 'class' => ' '
+            )))
+            ->add('Mreferencement', 'choice', array(
+                'required' => false,
+                'placeholder' => false,
+                'choices' => array(
+                    '1' => 'Oui',
+                    '0' => 'Non'
+                ),
+                'data' => false,
+                "label" => "Module Actualité :",
+                'attr' => array( 'class' => ' '
+            )))
+            ->add('Mcalendrier', 'choice', array(
+                'required' => false,
+                'placeholder' => false,
+                'choices' => array(
+                    '1' => 'Oui',
+                    '0' => 'Non'
+                ),
+
+                'data' => false,
+                "label" => "Module Actualité :",
+                'attr' => array( 'class' => ''
+            )))
+            ->add('Mnewsletter', 'choice', array(
+                'required' => false,
+                'placeholder' => false,
+                'choices' => array(
+                    '1' => 'Oui',
+                    '0' => 'Non'
+                ),
+
+                'data' => false,
+                "label" => "Module Actualité :",
+                'attr' => array( 'class' => ''
+            )))
+
+
+
+            ->add('Mautre', 'text', array(
+                "label" => "Autre Module :",
+                'attr' => array('id' => 'icon_prefix', 'class' => 'validate'
+            )))
             ->add('message', 'textarea', array(
-                "label" => "Message :"
-            ));
+                "label" => "Message :",
+                'attr' => array( 'class' => 'control-label'
+            )));
     }
 
     /**
