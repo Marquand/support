@@ -10,25 +10,21 @@
 }
 
 .item:nth-child(1) {
-    background-image: url(http://localhost:8888/support/web/images/slider1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .item:nth-child(2) {
-    background-image: url(http://localhost:8888/support/web/images/clavier1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .item:nth-child(3) {
-    background-image: url(http://localhost:8888/support/web/images/slider3.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     
 }
 .item:nth-child(4) {
-    background-image: url(http://localhost:8888/support/web/images/slider4.png);
     background-repeat: no-repeat;
     background-size: cover;
     
@@ -67,4 +63,6 @@ color: #fff;
 font-size: 15px;
 }
 
-
+.asideModule {
+  margin: -7.5rem 0 1rem 0;
+}

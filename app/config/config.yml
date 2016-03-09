@@ -92,3 +92,19 @@ fos_user:
     db_driver: orm
     firewall_name: main
     user_class: PointWeb\UserBundle\Entity\User
+    
+liip_imagine:
+    resolvers:
+       default:
+          web_path: ~
+
+    filter_sets:
+        cache: ~
+        my_thumb:
+            quality: 75
+            filters:
+                thumbnail: { size: [262, 148], mode: outbound }
+        slider:
+            quality: 75
+            filters:
+                thumbnail: { size: [847, 400], mode: outbound }

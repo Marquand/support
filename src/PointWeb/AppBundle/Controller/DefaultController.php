@@ -18,12 +18,82 @@ use Symfony\Component\Serializer\Serializer;
 
 class DefaultController extends Controller
 {
-    public function indexAction()
+    public function indexAction(Request $request)
     {
+       $status = 0;
+
+        $entity = new ContactMail();
+        $form = $this->createForm(new ContactMailType(), $entity, array(
+            'method' => 'POST',
+        ));
+
+        $form->add('submit', 'submit', array('label' => 'Envoyer', 'attr' => array('class' => 'btn btn-info waves-effect waves-light')));
+        $form->handleRequest($request);
+
+        if ($form->isValid()) {
+           
+                $em = $this->getDoctrine()->getManager();
+                $em->persist($entity);
+                $em->flush();
+
+                $message = \Swift_Message::newInstance()
+                    ->setSubject('Demande de contact site')
+                    ->setFrom($this->container->getParameter('mail_to'))
+                    ->setTo($this->container->getParameter('mail_to'))
+                    ->setBody($this->renderView('PointWebAppBundle:Mail:contactmail.txt.twig', array(
+                        'entity' => $entity
+                    )));
+                $this->get('mailer')->send($message);
+
+                return $this->redirect($this->generateUrl('point_web_app_thanks'));
+            }
+       
+           if ($status == 0) {
+            return $this->render('PointWebAppBundle:Default:index.html.twig', array(
+                'entity' => $entity,
+                'form' => $form->createView(),
+            ));
+    }
+      
             return $this->render('PointWebAppBundle:Default:index.html.twig');
     }
-    public function creationAction()
+    public function creationAction(Request $request)
     {
+       $status = 0;
+
+        $entity = new ContactMail();
+        $form = $this->createForm(new ContactMailType(), $entity, array(
+            'method' => 'POST',
+        ));
+
+        $form->add('submit', 'submit', array('label' => 'Envoyer', 'attr' => array('class' => 'btn btn-info waves-effect waves-light')));
+        $form->handleRequest($request);
+
+        if ($form->isValid()) {
+           
+                $em = $this->getDoctrine()->getManager();
+                $em->persist($entity);
+                $em->flush();
+
+                $message = \Swift_Message::newInstance()
+                    ->setSubject('Demande de contact site')
+                    ->setFrom($this->container->getParameter('mail_to'))
+                    ->setTo($this->container->getParameter('mail_to'))
+                    ->setBody($this->renderView('PointWebAppBundle:Mail:contactmail.txt.twig', array(
+                        'entity' => $entity
+                    )));
+                $this->get('mailer')->send($message);
+
+                return $this->redirect($this->generateUrl('point_web_app_thanks'));
+            }
+       
+           if ($status == 0) {
+            return $this->render('PointWebAppBundle:Default:creation.html.twig', array(
+                'entity' => $entity,
+                'form' => $form->createView(),
+            ));
+    }
+      
             return $this->render('PointWebAppBundle:Default:creation.html.twig');
     }
 
@@ -47,9 +117,9 @@ class DefaultController extends Controller
                 $em->flush();
 
                 $message = \Swift_Message::newInstance()
-                    ->setSubject('Contact site')
-                    ->setFrom($entity->getEmail())
-                    ->setTo($this->container->getParameter('marquand.thibault@gmail.com'))
+                    ->setSubject('Demande de contact site')
+                    ->setFrom($this->container->getParameter('mail_to'))
+                    ->setTo($this->container->getParameter('mail_to'))
                     ->setBody($this->renderView('PointWebAppBundle:Mail:contactmail.txt.twig', array(
                         'entity' => $entity
                     )));
@@ -118,8 +188,8 @@ class DefaultController extends Controller
                 $em->flush();
 
                 $message = \Swift_Message::newInstance()
-                    ->setSubject('Contact site')
-                    ->setFrom($entity->getEmail())
+                    ->setSubject('Devis Client')
+                    ->setFrom($this->container->getParameter('mail_to'))
                     ->setTo($this->container->getParameter('mail_to'))
                     ->setBody($this->renderView('PointWebAppBundle:Mail:contact.txt.twig', array(
                         'entity' => $entity
@@ -142,13 +212,47 @@ class DefaultController extends Controller
             ));
         }
     }
-    public function realisationAction()
+    public function realisationAction(Request $request)
     {
+      $status = 0;
+
+        $entity = new ContactMail();
+        $form = $this->createForm(new ContactMailType(), $entity, array(
+            'method' => 'POST',
+        ));
+
+        $form->add('submit', 'submit', array('label' => 'Envoyer', 'attr' => array('class' => 'btn btn-info waves-effect waves-light')));
+        $form->handleRequest($request);
+
+        if ($form->isValid()) {
+           
+                $em = $this->getDoctrine()->getManager();
+                $em->persist($entity);
+                $em->flush();
+
+                $message = \Swift_Message::newInstance()
+                    ->setSubject('Demande de contact site')
+                    ->setFrom($this->container->getParameter('mail_to'))
+                    ->setTo($this->container->getParameter('mail_to'))
+                    ->setBody($this->renderView('PointWebAppBundle:Mail:contactmail.txt.twig', array(
+                        'entity' => $entity
+                    )));
+                $this->get('mailer')->send($message);
+
+                return $this->redirect($this->generateUrl('point_web_app_thanks'));
+            }
+       
+           if ($status == 0) {
+            return $this->render('PointWebAppBundle:Default:realisation.html.twig', array(
+                'entity' => $entity,
+                'form' => $form->createView(),
+            ));
+    }
         return $this->render('PointWebAppBundle:Default:realisation.html.twig');
     }
     public function thanksAction()
     {
-        return $this->render('PointWebAppBundle:Default:index.html.twig');
+        return $this->render('PointWebAppBundle:Default:thanks.html.twig');
     }
 
     public function cookiesAction()

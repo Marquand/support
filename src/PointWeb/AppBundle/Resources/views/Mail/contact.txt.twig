@@ -1,56 +1,27 @@
 Vous avez reçu le message suivant via votre site web
 
-<div class="panel panel-info">
-    <div class="panel-heading">Nom</div>
-    <div class="panel-body">
-        {{ entity.lastname }}
-    </div>
-</div>
-<div class="panel panel-info">
-    <div class="panel-heading">Prénom</div>
-    <div class="panel-body">
-        {{ entity.firstname }}
-    </div>
-</div>
-<div class="panel panel-info">
-    <div class="panel-heading">Téléphone</div>
-    <div class="panel-body">
-        {{ entity.phone }}
-    </div>
-</div>
-<div class="panel panel-info">
-    <div class="panel-heading">Email</div>
-    <div class="panel-body">
-        {{ entity.email }}
-    </div>
-</div>
-<div class="panel panel-info">
-    <div class="panel-heading">Adresse</div>
-    <div class="panel-body">
-        {{ entity.address }}
-    </div>
-</div>
-<div class="panel panel-info">
-    <div class="panel-heading">Code postal</div>
-    <div class="panel-body">
-        {{ entity.zipCode }}
-    </div>
-</div>
-<div class="panel panel-info">
-    <div class="panel-heading">Ville</div>
-    <div class="panel-body">
-        {{ entity.city }}
-    </div>
-</div>
-<div class="panel panel-info">
-    <div class="panel-heading">Message</div>
-    <div class="panel-body">
-        {{ entity.message }}
-    </div>
-</div>
-<div class="panel panel-info">
-    <div class="panel-heading">Date de création</div>
-    <div class="panel-body">
-        {{ entity.createDate|date('d-m-Y') }}
-    </div>
-</div>
+Identification
+
+Nom: {{ entity.lastname }}
+Prénom:{{ entity.firstname }}
+Téléphone: {{ entity.phone }}
+ Email: {{ entity.email }}
+Adresse: {{ entity.address }}
+Code postal: {{ entity.zipCode }}
+Ville: {{ entity.city }}
+Message: {{ entity.message }}
+Date de création: {{ entity.createDate|date('d-m-Y') }}
+    
+    
+Devis Technique
+
+Module Actualité: {{ entity.Mactualite }}
+Module Contact: {{ entity.Mcontact }}
+Module Produit: {{ entity.Mproduit }}
+Module Livre D'or: {{ entity.Mlivre }}
+Module Partenaire: {{ entity.Mpartenaire }}
+Module Catégorie: {{ entity.Mcategorie }}
+Module Référencement: {{ entity.Mreferencement }}
+Module Calendrier: {{ entity.Mcalendrier }}
+Module Newsletter: {{ entity.Mnewsletter }}
+Demande de module personnalisé : {{ entity.Mautre }}

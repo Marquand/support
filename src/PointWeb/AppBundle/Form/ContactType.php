@@ -33,14 +33,17 @@ class ContactType extends AbstractType
             )))
             ->add('address', 'text', array(
                 "label" => "Adresse :",
+                'required' => false,
                 'attr' => array('id' => 'icon_prefix', 'class' => 'validate'
             )))
             ->add('zipCode', 'text', array(
                 "label" => "Code postal :",
+                'required' => false,
                 'attr' => array('id' => 'icon_prefix', 'class' => 'validate'
             )))
             ->add('city', 'text', array(
                 "label" => "Ville :",
+                'required' => false,
                 'attr' => array('id' => 'icon_prefix', 'class' => 'validate'
             )))
 
@@ -151,12 +154,16 @@ class ContactType extends AbstractType
 
 
             ->add('Mautre', 'text', array(
-                "label" => "Autre Module :",
+                'required' => false,
+                "label" => "Autre Module :",              
                 'attr' => array('id' => 'icon_prefix', 'class' => 'validate'
             )))
             ->add('message', 'textarea', array(
                 "label" => "Message :",
-                'attr' => array( 'class' => 'control-label'
+                'required' => false,
+                'attr' => array( 
+                          'class' => 'control-label',
+                          'placeholder' => 'Un commentaire ?'
             )));
     }
 

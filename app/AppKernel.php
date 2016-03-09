@@ -32,6 +32,7 @@ class AppKernel extends Kernel
             new PointWeb\ReferencingBundle\PointWebReferencingBundle(),
             new PointWeb\PageBundle\PointWebPageBundle(),
             new PointWeb\NewsletterBundle\PointWebNewsletterBundle(),
+            new Liip\ImagineBundle\LiipImagineBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

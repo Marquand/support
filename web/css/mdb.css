@@ -3006,8 +3006,8 @@ footer.page-footer .column-title {
 
 footer.page-footer a {
   font-weight: 300;
-  font-size: 18px;
-  line-height: 40px;
+  font-size: 12px;
+  line-height: 24px;
 }
 
 footer.page-footer .social-section {
@@ -4095,7 +4095,7 @@ small {
 }
 
 .card .card-action a {
-  color: #ffab40;
+  color: black;
   margin-right: 20px;
   -webkit-transition: color 0.3s ease;
   -moz-transition: color 0.3s ease;

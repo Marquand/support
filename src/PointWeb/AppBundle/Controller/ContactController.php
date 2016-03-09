@@ -51,4 +51,27 @@ class ContactController extends Controller
             'entity'      => $entity
         ));
     }
+   /**
+     * Deletes a ContactMail entity.
+     *
+     */
+    public function deleteAction($id)
+    {
+
+        if ($id != 0 ) {
+            $em = $this->getDoctrine()->getManager();
+            $entity = $em->getRepository('PointWebAppBundle:Contact')->find($id);
+     
+          
+            if (!$entity) {
+                throw $this->createNotFoundException('Unable to find Contact entity.');
+              
+            }
+        
+            $em->remove($entity);
+            $em->flush();
+        }
+
+        return $this->redirect($this->generateUrl('admin_contact'));
+    }
 }

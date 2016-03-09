@@ -3,6 +3,8 @@
 namespace PointWeb\AppBundle\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\RedirectResponse;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 use PointWeb\AppBundle\Entity\ContactMail;
@@ -185,19 +187,21 @@ class ContactMailController extends Controller
      * Deletes a ContactMail entity.
      *
      */
-    public function deleteAction(Request $request, $id)
+    public function deleteAction($id)
     {
         $form = $this->createDeleteForm($id);
-        $form->handleRequest($request);
 
-        if ($form->isValid()) {
+
+        if ($id != 0 ) {
             $em = $this->getDoctrine()->getManager();
             $entity = $em->getRepository('PointWebAppBundle:ContactMail')->find($id);
-
+     
+          
             if (!$entity) {
                 throw $this->createNotFoundException('Unable to find ContactMail entity.');
+              
             }
-
+        
             $em->remove($entity);
             $em->flush();
         }

@@ -1,47 +1,51 @@
-
   <!-- Footer -->
   <footer class="page-footer info-color darken-1" if="footer">
     <div class="container">
       <div class="row">
+       
         <div class="col-md-3 col-md-offset-1">
           <p class="white-text center-on-small-only">Mediashare</p>
-          <p class="white-text center-on-small-only">Faites-nous confiances dans l'élaboration de vos sytèmes numériques.</p>
-          <a href="{{path('point_web_app_contact')}}" class="btn btn-danger waves-effect waves-light">Demande de Devis</a>
+          <p class="white-text center-on-small-only">Faites-nous confiance dans l'élaboration de vos systèmes numériques.</p>
+          <a href="{{path('point_web_app_contact')}}" class="btn btn-danger waves-effect waves-light">Remplir un Devis</a>
 
         </div>
         <hr class="hidden-lg hidden-md">
 
-        <div class="col-md-2">
-          <p class="white-text center-on-small-only">Liens Utiles</p>
-          <ul>
-            <li><a href="#" data-toggle="modal" data-target="#myModal" class="grey-text text-lighten-3" href="#!">Création Web</a>
-            </li>
-            <li><a class="grey-text text-lighten-3" href="http://mdbootstrap.com/material-design-for-bootstrap/" target="_blank">Hébergement & Maintenance</a>
-            </li>
-            <li><a class="grey-text text-lighten-3" href="http://mdbootstrap.com/forums/forum/bugs/" target="_blank">Devis</a>
-            </li>
-            <li><a class="grey-text text-lighten-3" href="http://mdbootstrap.com/forums/forum/support/" target="_blank">Support Client</a>
-            </li>
-            <li><a class="grey-text text-lighten-3" href="http://mdbootstrap.com/forums/forum/bugs/" target="_blank">Bug Report</a>
-            </li>
-
-
-
-          </ul>
-        </div>
-        <hr class="hidden-lg hidden-md">
-
-        <div class="col-md-3 text-center">
+        <div class="col-md-3 text-center col-md-offset-1">
           <p class="white-text text-center"> SOCIAL MEDIA</p>
           <a target="_blank" href="https://www.facebook.com/Videobuzz14/" class="btn-floating btn-large fb-bg waves-effect waves-light"><i class="fa fa-facebook"> </i></a>
           <a target="_blank" href="https://twitter.com/Mediashare_Supp" class="btn-floating btn-large tw-bg waves-effect waves-light"><i class="fa fa-twitter"> </i></a>
           <a target="_blank" href="https://plus.google.com/u/0/100018447212094503967/posts" class="btn-floating btn-large gplus-bg waves-effect waves-light"><i class="fa fa-google-plus"> </i></a>
         </div>
+        
+            <hr class="hidden-lg hidden-md">
+
+        <div class="col-md-3 col-md-offset-1">
+          <p class="white-text center-on-small-only">Liens Utiles</p>
+          <ul>
+            <li><a href="{{path('point_web_app_creation')}}" data-toggle="modal" data-target="#myModal" class="grey-text text-lighten-3">Création Web</a>
+            </li>
+            <li><a class="grey-text text-lighten-3" href="{{path('point_web_app_realisation')}}" target="_blank">Hébergement & Maintenance</a>
+            </li>
+            <li><a class="grey-text text-lighten-3" href="{{path('point_web_app_contact')}}" target="_blank">Devis</a>
+            </li>
+            <li><a class="grey-text text-lighten-3" href="#" target="_blank">Support Client</a>
+            </li>
+            <li><a class="grey-text text-lighten-3" href="#" target="_blank">Bug Report</a>
+            </li>
+
+          </ul>
+        </div>
+        
       </div>
     </div>
+    
     <div class="footer-copyright">
       <div class="container">
-        <div class="col-md-10 col-md-offset-1"> © 2015 Copyright <a href="http://mediashare.fr">Mediashare.fr </a> | plateforme d'innovation numérique, création web / applicative.
+        <div class="col-md-10 col-md-offset-1" style="text-align:center;"> 
+      
+          © 2015 Copyright <a href="http://mediashare.fr">Mediashare.fr </a> | plateforme d'innovation numérique, création web / applicative.
+        
         </div>
       </div>
     </div>

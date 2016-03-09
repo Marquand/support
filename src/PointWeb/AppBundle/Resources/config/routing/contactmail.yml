@@ -27,4 +27,3 @@ admin_contactmail_update:
 admin_contactmail_delete:
     path:     /{id}/delete
     defaults: { _controller: "PointWebAppBundle:ContactMail:delete" }
-    methods:  [POST, DELETE]

@@ -25,3 +25,5 @@ security:
         - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/admin/, role: ROLE_ADMIN }
         - { path: ^/profile/, role: ROLE_USER }
+        - { path: /_wdt/.*, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: /_profiler/.*, role: IS_AUTHENTICATED_ANONYMOUSLY }

@@ -1,165 +1,144 @@
-{% extends 'PointWebAppBundle::base.html.twig' %}
-{% block content %}
-    <div class="container">
-        <div class="row page-content">
-            <div class="col-md-3">
-                <div class="sidebar">
-                    <!-- Subscription widget -->
-                    <div class="card-panel">
-                        <div class="row">
-                            <div class="col-md-12" style="max-width:250px;">
-                                
-                                <h5>Remplisser votre devis</h5>
-                                <h6>Une réponse vous serra donné au plus vite.</h6>
-                                <br>
-                                <h5>
-                                Les Modules :
-                                </h5>
-                                <h6>Qu'est-ce qu'un Module ?</h6>
-                                <p>
-                                    Les modules ce sont des outils mis à disposition du client afin de répondre à certaine demande. Ceux-ci vous donnes la possibilité d'administré votre site comme sur n'importe qu'elle <strong>CMS</strong> ( type : Wordpress, Joomla ect ... ) avec beaucoup plus de clairté et moins de contrainte. Je créer moi mêmes mets modules, donc une <strong>personnalisation total des outils</strong> est possibles.
-                                </p>
-                                <br/>
-                                <p>Pour toutes demande d'information supplémentaire, vous me joindre directement par email à l'adresse suivante : <a href="">Marquand.Thibault@gmail.com</a></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row text-center">
-                <!-- /.col-md-4 -->
-                <div class="col-md-8">
-                    <div class="card hoverable">
-                        <div class="card-content">
-                            {{ form_start(form) }}
-                            
-                            <fieldset>
-                                <div class="input-field">
-                                    {{ form_errors(form.lastname) }}
-                                    {{ form_widget(form.lastname) }}
-                                    <label for="icon_prefix">Votre Nom</label>
-                                    
-                                </div>
-                                <div class="input-field">
-                                    {{ form_errors(form.firstname) }}
-                                    {{ form_widget(form.firstname) }}
-                                    <label for="icon_prefix">Votre Prénom</label>
-                                </div>
-                                <div class="input-field">
-                                    {{ form_errors(form.phone) }}
-                                    {{ form_widget(form.phone) }}
-                                    <label for="icon_prefix">Votre Téléphone</label>
-                                </div>
-                                <div class="input-field">
-                                    {{ form_errors(form.email) }}
-                                    {{ form_widget(form.email) }}
-                                    <label for="icon_prefix">Votre Email</label>
-                                </div>
-                                <div class="input-field">
-                                    {{ form_errors(form.address) }}
-                                    {{ form_widget(form.address) }}
-                                    <label for="icon_prefix">Votre Adresse</label>
-                                </div>
-                                <div class="input-field">
-                                    {{ form_errors(form.zipCode) }}
-                                    {{ form_widget(form.zipCode) }}
-                                    <label for="icon_prefix">Votre Code Postal</label>
-                                </div>
-                                <div class="input-field">
-                                    {{ form_errors(form.city) }}
-                                    {{ form_widget(form.city) }}
-                                    <label for="icon_prefix">Votre Ville</label>
-                                </div>
-                                <div class="input-field">
-                                    {{ form_errors(form.message) }}
-                                    {{ form_widget(form.message) }}
-                                </div>
-                            </fieldset>
-                        </div>
-                    </div>
-                    <div class="card hoverable">
-                        <div class="card-content">
-                            <div class="col-md-6">
-                                <fieldset>
-                                    <div class="input-field">
-                                        {{ form_errors(form.Mactualite) }}
-                                        {{ form_widget(form.Mactualite) }}
-                                        <label for="">Module Actualité</label>
-                                    </div>
-                                    <div class="input-field">
-                                        {{ form_errors(form.Mcontact) }}
-                                        {{ form_widget(form.Mcontact) }}
-                                        <label for="icon_prefix">Module Contact</label>
-                                    </div>
-                                    <div class="input-field">
-                                        {{ form_errors(form.Mproduit) }}
-                                        {{ form_widget(form.Mproduit) }}
-                                        <label for="icon_prefix">Module Produit</label>
-                                    </div>
-                                    <div class="input-field">
-                                        {{ form_errors(form.Mlivre) }}
-                                        {{ form_widget(form.Mlivre) }}
-                                        <label for="icon_prefix">Module Livre</label>
-                                    </div>
-                                    <div class="input-field">
-                                        {{ form_errors(form.Mpartenaire) }}
-                                        {{ form_widget(form.Mpartenaire) }}
-                                        <label for="icon_prefix">Module Partenaire</label>
-                                    </div>
-                                </fieldset>
-                            </div>
-                            <div class="col-md-6">
-                                <fieldset>
-                                    <div class="input-field">
-                                        {{ form_errors(form.Mcategorie) }}
-                                        {{ form_widget(form.Mcategorie) }}
-                                        <label for="">Module Catégorie</label>
-                                    </div>
-                                    <div class="input-field">
-                                        {{ form_errors(form.Mreferencement) }}
-                                        {{ form_widget(form.Mreferencement) }}
-                                        <label for="icon_prefix">Module Référencement</label>
-                                    </div>
-                                    <div class="input-field">
-                                        {{ form_errors(form.Mcalendrier) }}
-                                        {{ form_widget(form.Mcalendrier) }}
-                                        <label for="icon_prefix">Module Calendrier</label>
-                                    </div>
-                                    <div class="input-field">
-                                        {{ form_errors(form.Mnewsletter) }}
-                                        {{ form_widget(form.Mnewsletter) }}
-                                        <label for="icon_prefix">Module Newsletter</label>
-                                    </div>
-                                    <div class="input-field">
-                                        {{ form_errors(form.Mautre) }}
-                                        {{ form_widget(form.Mautre) }}
-                                        <label for="icon_prefix">Demander votre propre module :</label>
-                                    </div>
-                                </fieldset>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card hoverable">
-                        <div class="card-content">
-                            
-                            <fieldset>
-                                <fieldset id="captcha">
-                                    <legend align="center">Veuillez répondre à la question pour envoyer votre message.</legend>
-                                    {% if captcha != "" %}
-                                        <p class="error"> mauvaise r&eacute;ponse </p>{% endif %}
-                                        <div id="captcha_content">
-                                            <p class="captcha_question">{{ question }} <span>*</span></p>
-                                            <input class="reponse_captcha" type="text" name="captcha" placeholder="Entrez la réponse" value="{{ captcha }}" />
-                                        </div>
-                                    </fieldset>
-                                </fieldset>
-                                
-                                {{ form_end(form) }}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+{% extends 'PointWebAppBundle::base.html.twig' %} {% block content %}
+<div class="container col-md-12 row">
+  <div class="row page-content">
+    <div class="col-md-3">
+      <div class="sidebar asideModule">
+        <!-- Subscription widget -->
+        <div class="card-panel">
+          <div class="row">
+            <div class="col-md-12" style="max-width:250px;">
+
+              <h5>Remplir votre devis</h5>
+              <h6>Une réponse vous serra donné au plus vite.</h6>                                 
+              <br>
+              <h5>Les Modules :</h5>
+              <h6>Qu'est-ce qu'un Module ?</h6>
+              <p>
+                Les modules ce sont des outils mis à disposition du client afin de répondre à certaine demande. Ceux-ci vous donnes la possibilité d'administré votre site comme sur n'importe qu'elle <strong>CMS</strong>                ( type : Wordpress, Joomla ect ... ) avec beaucoup plus de clarté et moins de contrainte. Je créer moi mêmes mets modules, donc une <strong>personnalisation total des outils</strong> est possibles.                                 
+              </p>
+              <br/>
+              <p>Pour toutes demande d'information supplémentaire, vous me joindre directement par email à l'adresse suivante : <a href="">Marquand.Thibault@gmail.com</a></p>
+              </div>
+          </div>
         </div>
-        
-    {% endblock %}
+      </div>
+    </div>
+    <div class="row text-center">
+      <!-- /.col-md-4 -->
+      <div class="col-md-8">
+        <div class="card hoverable">
+          <div class="card-content">
+            {{ form_start(form) }}
+
+            <fieldset>
+              <div class="input-field">
+                {{ form_errors(form.lastname) }} {{ form_widget(form.lastname) }}
+                <label for="icon_prefix">Votre Nom</label>
+
+              </div>
+              <div class="input-field">
+                {{ form_errors(form.firstname) }} {{ form_widget(form.firstname) }}
+                <label for="icon_prefix">Votre Prénom</label>
+              </div>
+              <div class="input-field">
+                {{ form_errors(form.phone) }} {{ form_widget(form.phone) }}
+                <label for="icon_prefix">Votre Téléphone</label>
+              </div>
+              <div class="input-field">
+                {{ form_errors(form.email) }} {{ form_widget(form.email) }}
+                <label for="icon_prefix">Votre Email</label>
+              </div>
+              <div class="input-field">
+                {{ form_errors(form.address) }} {{ form_widget(form.address) }}
+                <label for="icon_prefix">Votre Adresse</label>
+              </div>
+              <div class="input-field">
+                {{ form_errors(form.zipCode) }} {{ form_widget(form.zipCode) }}
+                <label for="icon_prefix">Votre Code Postal</label>
+              </div>
+              <div class="input-field">
+                {{ form_errors(form.city) }} {{ form_widget(form.city) }}
+                <label for="icon_prefix">Votre Ville</label>
+              </div>
+              <div class="input-field">
+                {{ form_errors(form.message) }} {{ form_widget(form.message) }}
+              </div>
+            </fieldset>
+          </div>
+        </div>
+        <div class="card hoverable">
+          <div class="card-content">
+            <div class="col-md-6">
+              <fieldset>
+                <div class="input-field">
+                  {{ form_errors(form.Mactualite) }} {{ form_widget(form.Mactualite) }}
+                  <label for="">Module Actualité</label>
+                </div>
+                <div class="input-field">
+                  {{ form_errors(form.Mcontact) }} {{ form_widget(form.Mcontact) }}
+                  <label for="icon_prefix">Module Contact</label>
+                </div>
+                <div class="input-field">
+                  {{ form_errors(form.Mproduit) }} {{ form_widget(form.Mproduit) }}
+                  <label for="icon_prefix">Module Produit</label>
+                </div>
+                <div class="input-field">
+                  {{ form_errors(form.Mlivre) }} {{ form_widget(form.Mlivre) }}
+                  <label for="icon_prefix">Module Livre</label>
+                </div>
+                <div class="input-field">
+                  {{ form_errors(form.Mpartenaire) }} {{ form_widget(form.Mpartenaire) }}
+                  <label for="icon_prefix">Module Partenaire</label>
+                </div>
+              </fieldset>
+            </div>
+            <div class="col-md-6">
+              <fieldset>
+                <div class="input-field">
+                  {{ form_errors(form.Mcategorie) }} {{ form_widget(form.Mcategorie) }}
+                  <label for="">Module Catégorie</label>
+                </div>
+                <div class="input-field">
+                  {{ form_errors(form.Mreferencement) }} {{ form_widget(form.Mreferencement) }}
+                  <label for="icon_prefix">Module Référencement</label>
+                </div>
+                <div class="input-field">
+                  {{ form_errors(form.Mcalendrier) }} {{ form_widget(form.Mcalendrier) }}
+                  <label for="icon_prefix">Module Calendrier</label>
+                </div>
+                <div class="input-field">
+                  {{ form_errors(form.Mnewsletter) }} {{ form_widget(form.Mnewsletter) }}
+                  <label for="icon_prefix">Module Newsletter</label>
+                </div>
+                <div class="input-field">
+                  {{ form_errors(form.Mautre) }} {{ form_widget(form.Mautre) }}
+                  <label for="icon_prefix">Demander votre propre module :</label>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+        <div class="card hoverable">
+          <div class="card-content">
+
+            <fieldset>
+              <fieldset id="captcha">
+                <legend align="center">Veuillez répondre à la question pour envoyer votre message.</legend>
+                {% if captcha != "" %}
+                <p class="error"> mauvaise r&eacute;ponse </p>{% endif %}
+                <div id="captcha_content">
+                  <p class="captcha_question">{{ question }} <span>*</span></p>
+                  <input class="reponse_captcha" type="text" name="captcha" placeholder="Entrez la réponse" value="{{ captcha }}" />
+                </div>
+              </fieldset>
+            </fieldset>
+
+            {{ form_end(form) }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

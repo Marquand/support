@@ -53,8 +53,17 @@ input, textarea, button {
     -webkit-border-radius: 0; 
 }
 
+html{
+		height: 100%;
+	margin: 0;
+		padding: 0;
+}
+
 body {
     font-family: sans-serif;
+		min-height: 100%;
+		margin: 0;
+		padding: 0;
 }
 
 img {
